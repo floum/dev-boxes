@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.define 'cooper-dev-box'
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path ['../../chef_cookbooks']
+    chef.cookbooks_path = ['../../chef_cookbooks']
     chef.add_recipe 'git'
     chef.add_recipe 'mongodb-org-3'
     chef.add_recipe 'rbenv-2.3.0'
